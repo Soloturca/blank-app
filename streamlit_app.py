@@ -54,8 +54,8 @@ def train_and_predict(data, days_ahead=7):
     return prediction
 
 # Streamlit interface
-st.title("Hisse Senedi Tahmin Chatbotu")
-symbol = st.text_input("Hisse senedi sembolü girin (ör. AAPL):", value="AAPL")
+st.title("Stock Price Prediction Chatbot")
+symbol = st.text_input("Please write a stock symbol... (egg. AAPL):", value="AAPL")
 days_ahead = st.slider("Tahmin süresi (gün):", min_value=1, max_value=30, value=7)
 
 if st.button("Predict"):
@@ -64,4 +64,4 @@ if st.button("Predict"):
         if data is not None:
             st.line_chart(data["close"])
             prediction = train_and_predict(data, days_ahead=days_ahead)
-            st.success(f"{symbol} sembolü için {days_ahead} gün sonraki tahmini fiyat: ${prediction:.2f}")
+            st.success(f"for symbol {symbol} prediction after {days_ahead} days: ${prediction:.2f}")
