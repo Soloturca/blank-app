@@ -56,7 +56,7 @@ def train_and_predict(data, days_ahead=7):
 # Streamlit interface
 st.title("Stock Price Prediction Chatbot")
 symbol = st.text_input("Please write a stock symbol... (egg. AAPL):", value="AAPL")
-days_ahead = st.slider("Tahmin süresi (gün):", min_value=1, max_value=30, value=7)
+days_ahead = st.slider("Prediction period (days):", min_value=1, max_value=30, value=7)
 
 if st.button("Predict"):
     with st.spinner("Stock data is processing..."):
