@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 # API settings
 API_URL = "https://www.alphavantage.co/query"
-API_KEY = "YOUR_API_KEY"
+API_KEY = "RFIRS1QW21OFFHVZ"
 
 def get_stock_data(symbol):
     params = {
