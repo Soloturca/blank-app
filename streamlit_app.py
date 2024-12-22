@@ -5,8 +5,9 @@ import numpy as np
 import tensorflow as tf
 
 from sklearn.preprocessing import MinMaxScaler
-from tensorflow import Sequential
-from tensorflow import LSTM, Dense, Dropout
+
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import LSTM, Dense, Dropout
 from datetime import datetime, timedelta
 
 # API settings
